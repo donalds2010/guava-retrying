@@ -4,8 +4,8 @@ import org.gradle.api.artifacts.maven.MavenDeployment
 // Settings
 ext {
     project_group = 'com.github.rholder'
-    project_version = '2.0.0'
-    project_jdk = '1.6'
+    project_version = '3.0.0'
+    project_jdk = '1.8'
     project_pom = {
         name 'guava-retrying'
         packaging 'jar'
@@ -81,7 +81,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.google.guava:guava:[10.+,)'
+    compile 'com.google.guava:guava:[20.+,)'
     compile 'com.google.code.findbugs:jsr305:2.0.2'
 
     // junit testing
@@ -185,9 +185,9 @@ uploadArchives {
 // Utilities
 
 // enable Gradle Wrapper support for bootstrapping with specific version
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.4'
-}
+//task wrapper(type: Wrapper) {
+//    gradleVersion = '6.8.3'
+//}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // IDE
